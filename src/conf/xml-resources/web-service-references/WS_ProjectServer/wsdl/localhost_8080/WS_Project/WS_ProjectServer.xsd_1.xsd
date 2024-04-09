@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.0 (wsit240-7e98ff4; 2017-08-03T21:19:54+0200) JAXWS-RI/2.3.0 JAXWS-API/2.3.0 JAXB-RI/2.3.0 JAXB-API/2.3.0 svn-revision#unknown. --><xs:schema xmlns:tns="http://basicCalc.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://basicCalc.com/">
+
+<xs:element name="NotValidIcNumberException" type="tns:NotValidIcNumberException"/>
+
+<xs:element name="absi" type="tns:absi"/>
+
+<xs:element name="absiResponse" type="tns:absiResponse"/>
+
+<xs:element name="age" type="tns:age"/>
+
+<xs:element name="ageResponse" type="tns:ageResponse"/>
+
+<xs:element name="calc_bmi" type="tns:calc_bmi"/>
+
+<xs:element name="calc_bmiResponse" type="tns:calc_bmiResponse"/>
+
+<xs:element name="cbr" type="tns:cbr"/>
+
+<xs:element name="cbrResponse" type="tns:cbrResponse"/>
+
+<xs:element name="getBFPCalc" type="tns:getBFPCalc"/>
+
+<xs:element name="getBFPCalcResponse" type="tns:getBFPCalcResponse"/>
+
+<xs:complexType name="absi">
+<xs:sequence>
+<xs:element name="weight" type="xs:float"/>
+<xs:element name="height" type="xs:float"/>
+<xs:element name="waist" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="absiResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="calc_bmi">
+<xs:sequence>
+<xs:element name="weight" type="xs:float"/>
+<xs:element name="height" type="xs:float"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="calc_bmiResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="age">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="ageResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="NotValidIcNumberException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cbr">
+<xs:sequence>
+<xs:element name="ic" type="xs:string" minOccurs="0"/>
+<xs:element name="weight" type="xs:float"/>
+<xs:element name="height" type="xs:float"/>
+<xs:element name="gender" type="xs:string" minOccurs="0"/>
+<xs:element name="activity" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cbrResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getBFPCalc">
+<xs:sequence>
+<xs:element name="height" type="xs:float"/>
+<xs:element name="waist" type="xs:float"/>
+<xs:element name="neck" type="xs:float"/>
+<xs:element name="hip" type="xs:float"/>
+<xs:element name="arg4" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getBFPCalcResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
